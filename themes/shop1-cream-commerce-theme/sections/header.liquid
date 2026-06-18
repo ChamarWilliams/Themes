@@ -8,6 +8,11 @@
     </form>
     <nav class="header-actions" aria-label="Store">
       <button class="drawer-trigger" type="button" data-category-drawer-open aria-controls="CategoryDrawer" aria-expanded="false">Categories</button>
+      {% if customer %}
+        <a href="{{ routes.account_url }}">Account</a>
+      {% else %}
+        <a href="{{ routes.account_login_url }}">Sign in</a>
+      {% endif %}
       <a href="{{ routes.cart_url }}">Cart ({{ cart.item_count }})</a>
     </nav>
   </div>
@@ -50,8 +55,13 @@
 
   <div class="drawer-quick-actions">
     <a href="{{ routes.cart_url }}">View cart</a>
-    <a href="{{ routes.search_url }}">Advanced search</a>
+    {% if customer %}
+      <a href="{{ routes.account_url }}">Orders</a>
+    {% else %}
+      <a href="{{ routes.account_login_url }}">Optional sign in</a>
+    {% endif %}
   </div>
+  <p class="drawer-note">Your cart can stay saved in this browser. Sign in is optional and helps with order history.</p>
 </aside>
 
 {% schema %}
