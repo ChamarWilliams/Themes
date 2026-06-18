@@ -36,3 +36,17 @@ closeButtons.forEach(button => {
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') setDrawer(false);
 });
+
+const cookieBanner = document.querySelector('[data-cookie-banner]');
+const cookieAccept = document.querySelector('[data-cookie-accept]');
+
+if (cookieBanner && window.localStorage.getItem('shop1-cookie-notice') !== 'accepted') {
+  cookieBanner.hidden = false;
+}
+
+if (cookieAccept) {
+  cookieAccept.addEventListener('click', () => {
+    window.localStorage.setItem('shop1-cookie-notice', 'accepted');
+    if (cookieBanner) cookieBanner.hidden = true;
+  });
+}
