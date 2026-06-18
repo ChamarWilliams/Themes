@@ -9,10 +9,16 @@
       {% for product in selected_collection.products limit: 8 %}
         {% render 'product-card', product: product %}
       {% endfor %}
-    {% else %}
+    {% elsif collections.all.products_count > 0 %}
       {% for product in collections.all.products limit: 8 %}
         {% render 'product-card', product: product %}
       {% endfor %}
+    {% else %}
+      <div class="empty-state">
+        <p class="eyebrow">Inventory in progress</p>
+        <h2>No products available yet</h2>
+        <p>The storefront is set up for convenience first. New Trefelle products will show here when they are ready to browse.</p>
+      </div>
     {% endif %}
   </div>
 </section>
