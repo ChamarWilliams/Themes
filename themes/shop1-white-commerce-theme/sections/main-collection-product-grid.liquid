@@ -1,0 +1,30 @@
+<section class="collection-page">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Browse</p>
+      <h1>{{ collection.title | default: 'All products' }}</h1>
+    </div>
+    <form class="sort-form">
+      <label for="SortBy">Sort</label>
+      <select id="SortBy" name="sort_by">
+        {% for option in collection.sort_options %}
+          <option value="{{ option.value }}" {% if option.value == collection.sort_by %}selected{% endif %}>{{ option.name }}</option>
+        {% endfor %}
+      </select>
+    </form>
+  </div>
+  <div class="product-grid">
+    {% for product in collection.products %}
+      {% render 'product-card', product: product %}
+    {% else %}
+      <p>No products found.</p>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection grid",
+  "settings": []
+}
+{% endschema %}
