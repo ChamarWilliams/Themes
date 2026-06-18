@@ -5,3 +5,34 @@ document.addEventListener('change', event => {
     window.location.href = url.toString();
   }
 });
+
+const drawer = document.getElementById('CategoryDrawer');
+const overlay = document.querySelector('[data-category-drawer-close].drawer-overlay');
+const openButtons = document.querySelectorAll('[data-category-drawer-open]');
+const closeButtons = document.querySelectorAll('[data-category-drawer-close]');
+
+function setDrawer(open) {
+  if (!drawer || !overlay) return;
+  drawer.classList.toggle('is-open', open);
+  overlay.classList.toggle('is-open', open);
+  overlay.hidden = !open;
+  drawer.setAttribute('aria-hidden', String(!open));
+  document.body.classList.toggle('drawer-open', open);
+  openButtons.forEach(button => button.setAttribute('aria-expanded', String(open)));
+  if (open) {
+    const firstInput = drawer.querySelector('input, button, a');
+    if (firstInput) firstInput.focus();
+  }
+}
+
+openButtons.forEach(button => {
+  button.addEventListener('click', () => setDrawer(true));
+});
+
+closeButtons.forEach(button => {
+  button.addEventListener('click', () => setDrawer(false));
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') setDrawer(false);
+});
