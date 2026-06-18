@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Support",
+        "heading": "Contact Us",
+        "body": "<p>For order questions, returns, shipping issues, or product support, contact us with your order number and the email used at checkout.</p><p>Add your support email, business mailing address if applicable, and expected response time before publishing.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
