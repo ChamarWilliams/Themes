@@ -6,6 +6,10 @@ document.addEventListener('change', event => {
   }
 });
 
+window.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('is-loaded');
+});
+
 const drawer = document.getElementById('CategoryDrawer');
 const overlay = document.querySelector('[data-category-drawer-close].drawer-overlay');
 const openButtons = document.querySelectorAll('[data-category-drawer-open]');
