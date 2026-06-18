@@ -37,7 +37,7 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape') setDrawer(false);
 });
 
-const cookieStorageKey = 'shop1-cookie-notice';
+const cookieStorageKey = 'trefelle-cookie-notice';
 const cookieBanner = document.querySelector('[data-cookie-banner]');
 
 function getCookieNoticeAccepted() {

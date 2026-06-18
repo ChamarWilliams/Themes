@@ -2,7 +2,7 @@
 
 Last updated: June 18, 2026
 
-These Terms of Service ("Terms") apply when you access, browse, or purchase from Shop1 ("we," "us," or "our"). By using the store, placing an order, creating an account, contacting support, or interacting with our services, you agree to these Terms.
+These Terms of Service ("Terms") apply when you access, browse, or purchase from Trefelle ("we," "us," or "our"). By using the store, placing an order, creating an account, contacting support, or interacting with our services, you agree to these Terms.
 
 ## Store Use
 

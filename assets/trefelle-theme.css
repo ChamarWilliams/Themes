@@ -1,13 +1,13 @@
 :root {
-  --color-ink: #2b2418;
-  --color-muted: #736850;
-  --color-line: #e7dcc8;
-  --color-bg: #f6efe1;
-  --color-panel: #fffaf0;
-  --color-accent: #6f5a2d;
-  --color-accent-strong: #51411f;
-  --color-soft: #fbf5e8;
-  --shadow: 0 8px 24px rgba(67, 51, 25, .09);
+  --color-ink: #1f2c22;
+  --color-muted: #657064;
+  --color-line: #d9e4d4;
+  --color-bg: #f7f1e6;
+  --color-panel: #fffdf5;
+  --color-accent: #4d955f;
+  --color-accent-strong: #2f6f43;
+  --color-soft: #edf6ec;
+  --shadow: 0 8px 24px rgba(43, 86, 52, .11);
 }
 
 * {
@@ -33,7 +33,7 @@ img {
 }
 
 .announcement {
-  background: #3a2f1c;
+  background: #2f6f43;
   color: #ffffff;
   padding: 8px 16px;
   text-align: center;
@@ -54,6 +54,29 @@ img {
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 0;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-accent-strong);
+  min-width: 0;
+}
+
+.brand-lockup img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.brand-lockup span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .search {
@@ -271,7 +294,7 @@ body.drawer-open {
 
 .hero-fallback {
   background:
-    linear-gradient(110deg, rgba(111, 90, 45, .9), rgba(43, 36, 24, .7)),
+    linear-gradient(110deg, rgba(47, 111, 67, .9), rgba(31, 44, 34, .72)),
     url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
   background-position: center;
@@ -284,11 +307,22 @@ body.drawer-open {
   color: #ffffff;
 }
 
+.hero-mark {
+  width: clamp(68px, 10vw, 116px);
+  height: clamp(68px, 10vw, 116px);
+  object-fit: contain;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 8px 18px rgba(18, 41, 25, .25));
+}
+
 .hero-content h1 {
   margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
   font-size: clamp(44px, 8vw, 92px);
   line-height: .96;
-  letter-spacing: 0;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
 .hero-content p {
@@ -664,5 +698,15 @@ body.drawer-open {
 
   .cookie-banner {
     grid-template-columns: 1fr;
+  }
+
+  .brand-lockup img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-lockup span {
+    font-size: 22px;
+    letter-spacing: .06em;
   }
 }

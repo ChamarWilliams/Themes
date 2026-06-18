@@ -1,9 +1,12 @@
 <header class="site-header">
   <div class="announcement">{{ settings.announcement_text }}</div>
   <div class="header-shell">
-    <a class="brand" href="{{ routes.root_url }}">{{ settings.brand_name | default: shop.name }}</a>
+    <a class="brand brand-lockup" href="{{ routes.root_url }}" aria-label="{{ settings.brand_name | default: 'Trefelle' }}">
+      <img src="{{ 'trefelle-logo-mark.png' | asset_url }}" alt="" loading="eager">
+      <span>{{ settings.brand_name | default: 'Trefelle' }}</span>
+    </a>
     <form class="search" action="{{ routes.search_url }}" method="get" role="search">
-      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search useful finds">
+      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search home goods">
       <button type="submit">Search</button>
     </form>
     <nav class="header-actions" aria-label="Store">
