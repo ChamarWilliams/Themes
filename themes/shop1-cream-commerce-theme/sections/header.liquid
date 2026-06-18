@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="announcement">{{ settings.announcement_text }}</div>
+  <div class="header-shell">
+    <a class="brand" href="{{ routes.root_url }}">{{ settings.brand_name | default: shop.name }}</a>
+    <form class="search" action="{{ routes.search_url }}" method="get" role="search">
+      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search useful finds">
+      <button type="submit">Search</button>
+    </form>
+    <nav class="header-actions" aria-label="Store">
+      <a href="{{ routes.collections_url }}">Categories</a>
+      <a href="{{ routes.cart_url }}">Cart ({{ cart.item_count }})</a>
+    </nav>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}
