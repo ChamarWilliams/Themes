@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Terms",
+        "heading": "Terms of Service",
+        "body": "<p>By using this store, customers agree to provide accurate order and contact information, use the site lawfully, and follow checkout and payment requirements.</p><p>Product descriptions, images, pricing, availability, and delivery estimates may change. We may cancel or refund orders when products are unavailable, incorrectly priced, suspected of fraud, or otherwise unable to be fulfilled.</p><p>Products should be used only as intended. The store is not responsible for misuse, improper installation, or failure to follow product instructions.</p><p>Do not publish this template until your legal business name, governing law, limitation language, contact information, and final operating terms are reviewed.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
