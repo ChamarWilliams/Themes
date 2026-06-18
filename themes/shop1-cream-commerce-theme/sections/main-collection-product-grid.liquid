@@ -17,7 +17,11 @@
     {% for product in collection.products %}
       {% render 'product-card', product: product %}
     {% else %}
-      <p>No products found.</p>
+      <div class="empty-state">
+        <p class="eyebrow">Coming soon</p>
+        <h2>No products available yet</h2>
+        <p>Trefelle is being prepared for carefully selected home goods. Products will appear here once the first listings are ready.</p>
+      </div>
     {% endfor %}
   </div>
 </section>
