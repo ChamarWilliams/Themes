@@ -1,96 +1,68 @@
-# Return And Refund Policy
+# No Returns And Refund Policy
 
 Last updated: [Insert Date]
 
-Thank you for shopping with [Store Name]. We want customers to feel confident while also keeping returns fair, trackable, and fraud-resistant.
+Thank you for shopping with [Store Name]. We are starting with a no-return model so we can keep pricing, fulfillment, and support simple while the store is new.
 
-## Return Window
+## No Returns
 
-Eligible items may be returned within 30 days after delivery.
+We do not accept product returns for buyer remorse, changed mind, ordering the wrong item, dislike of color/size/style, no longer needing the item, duplicate orders, or similar reasons.
 
-To be eligible for a return:
+Please review product descriptions, photos, sizing, quantities, compatibility notes, shipping estimates, and checkout details before placing an order.
 
-- The item must be unused, unworn, undamaged, and in the same condition received.
-- The item should include original packaging, accessories, manuals, tags, and inserts when applicable.
-- You must contact us before sending the item back.
-- The return must be approved and assigned a return authorization.
+## No Exchanges
 
-## Do Not Send Returns Without Approval
+We do not offer exchanges at launch.
 
-Do not send products to the address on the package, the supplier, or any address you find online unless we specifically provide that address in writing.
+If you want a different item, size, color, or variant, place a new order after reviewing the product details.
 
-Returns sent without approval may be refused, delayed, lost, or ineligible for refund.
+## Do Not Send Products Back
 
-After your return is approved, we will provide return instructions and the correct return destination. This may be a return center, fulfillment partner, supplier-authorized location, or business mailbox used for returns.
+Do not send products to the address on the package, the supplier, a carrier address, or any address found online.
 
-## How To Start A Return
+Because we are not accepting returns, unauthorized packages may be refused, lost, delayed, destroyed, or ineligible for refund.
 
-Contact us at [Support Email] with:
-
-- Order number
-- Email used at checkout
-- Item name
-- Reason for return
-- Photos if the item is damaged, defective, incorrect, or not as described
-
-We will review the request and reply with next steps.
+We do not publish or use a personal home address for returns.
 
 ## Damaged, Defective, Wrong, Or Missing Items
 
-Contact us as soon as possible if an item arrives damaged, defective, incorrect, incomplete, or materially different from the listing.
+Contact us as soon as possible if an item arrives damaged, defective, incorrect, incomplete, missing, or materially different from the listing.
 
-Include clear photos of:
+Email [Support Email] with:
 
-- The product
-- The packaging
-- Shipping label if relevant
-- The defect, damage, or wrong item
+- Order number
+- Email used at checkout
+- Product name
+- Clear description of the issue
+- Photos or video of the product, packaging, shipping label, and issue
 
-If approved, we may offer a replacement, refund, partial refund, store credit, or another reasonable resolution depending on the issue.
+If approved, we may offer a replacement, refund, partial refund, store credit, discount code, or another reasonable resolution. We may resolve the issue without requiring the item to be returned.
 
-## Buyer Remorse Returns
+## Lost Or Unshipped Orders
 
-For returns due to changed mind, ordering the wrong item, no longer needing the item, or similar buyer-remorse reasons:
+If we cannot fulfill an order, we will cancel and refund the unavailable item or order.
 
-- Customer may be responsible for return shipping.
-- Original shipping charges may be non-refundable.
-- The item must pass inspection before refund.
-- Return tracking may be required.
+If an order cannot be shipped within the stated timeframe, we will notify you and provide options as required, which may include consenting to the delay or canceling for a refund.
 
-## Non-Returnable Items
+If tracking shows delivered but you did not receive the package, check the delivery location, household members, neighbors, building staff, mailroom staff, and carrier before contacting support.
 
-Some items may not be eligible for return, including:
+## Incorrect Address Or Refused Delivery
 
-- Used, damaged, altered, washed, worn, or incomplete items
-- Personal care, hygiene, beauty, or intimate items where return would be unsafe
-- Customized, personalized, made-to-order, or special-order items
-- Perishable goods
-- Clearance/final sale items marked final sale before purchase
-- Gift cards or downloadable/digital products
-- Items returned without approval
-- Items outside the return window
+Customers are responsible for entering a complete and accurate shipping address.
 
-## Refund Timing
-
-After we receive and inspect an approved return, we will notify you whether the refund is approved.
-
-If approved, refunds are generally issued to the original payment method. Your bank, card issuer, PayPal, Shop Pay, or other payment provider may take additional time to post the refund.
-
-## Shipping Costs
-
-Unless required by law or unless the issue was caused by our error, shipping costs may be non-refundable.
-
-If a return shipping label is provided, the cost may be deducted from the refund unless the item was damaged, defective, incorrect, or otherwise eligible for free return shipping.
-
-## Exchanges
-
-We may offer exchanges when inventory is available. If an exchange is not available, we may offer refund, store credit, or replacement options.
+If a package is delayed, lost, returned, refused, or undeliverable because of an incorrect address, missing delivery details, refusal, or failure to pick up the package, we may be unable to refund the order.
 
 ## Order Cancellations
 
-Contact us quickly if you need to cancel an order. If the order has already been processed, packed, submitted to a supplier, or shipped, cancellation may not be possible.
+Contact us quickly if you need to cancel an order.
 
-If we cannot fulfill an order, we will cancel and refund the unavailable item or order.
+If the order has already been processed, packed, submitted to a supplier, or shipped, cancellation may not be possible.
+
+## Refund Timing
+
+Approved refunds are generally issued to the original payment method. Your bank, card issuer, PayPal, Shop Pay, or other payment provider may take additional time to post the refund.
+
+Shipping charges may be non-refundable unless the issue was caused by our error or a refund is required by law.
 
 ## Chargebacks And Disputes
 
@@ -98,7 +70,6 @@ Please contact us first so we can try to resolve the issue. Filing a chargeback 
 
 ## Contact
 
-Return and refund support:
+Refund and support questions:
 
 [Support Email]
-

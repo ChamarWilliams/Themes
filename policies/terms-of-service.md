@@ -35,11 +35,13 @@ Shipping and delivery are governed by our Shipping Policy. Delivery estimates ar
 
 If we cannot ship within the promised timeframe, we will notify you and provide options as required by applicable rules.
 
-## Returns And Refunds
+## No Returns And Refunds
 
-Returns and refunds are governed by our Return and Refund Policy.
+Returns and refunds are governed by our No Returns and Refund Policy.
 
-Customers must contact us before sending any return. Returns sent without approval may be refused, delayed, lost, or ineligible for refund.
+We do not accept buyer-remorse returns or exchanges at launch. Do not send products back to the sender, supplier, package address, or any address found online.
+
+Damaged, defective, wrong, missing, unshipped, or materially inaccurate orders should be reported to support so we can review the issue and offer an appropriate resolution where required or approved.
 
 ## Customer Accounts
 
@@ -86,4 +88,3 @@ We may update these Terms from time to time. Updated Terms will be posted on thi
 Questions about these Terms:
 
 [Support Email]
-

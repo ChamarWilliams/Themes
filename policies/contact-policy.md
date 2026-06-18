@@ -31,17 +31,16 @@ We can help with:
 - Shipping and tracking
 - Address correction requests
 - Damaged, defective, wrong, or missing items
-- Return and refund requests
+- Refund and order issue requests
 - Product questions
 - Account and checkout questions
 
-## Return Address
+## No Return Address
 
-Do not send products to any address unless we first approve the return and provide return instructions.
+Do not send products to any address. We are starting with a no-return model and do not accept buyer-remorse returns or exchanges.
 
-We do not publish a personal home address for returns. Approved returns may be sent to a return center, commercial mailbox, fulfillment partner, supplier-authorized return location, or another approved business return destination.
+We do not publish or use a personal home address for returns. If an item is damaged, defective, wrong, missing, unshipped, or materially different from the listing, contact support with photos or video so we can review the issue and offer an appropriate resolution where required or approved.
 
 ## Chargebacks
 
 Please contact us before filing a payment dispute. We can often resolve order, shipping, or product issues faster through support.
-
