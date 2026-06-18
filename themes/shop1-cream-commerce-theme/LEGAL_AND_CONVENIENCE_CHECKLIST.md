@@ -15,6 +15,7 @@ Before launch, configure Shopify Admin policies with your final business details
 - Terms of Service
 - No Returns and Refund Policy
 - Shipping Policy
+- Legal Notice
 - Contact page
 
 Recommended defaults:
@@ -24,7 +25,8 @@ Recommended defaults:
 - Start with no buyer-remorse returns and no exchanges.
 - Keep refunds/replacements available for damaged, defective, wrong, missing, unshipped, or materially inaccurate orders.
 - Use estimated delivery language.
-- Add a real support email.
+- Use Shopify Inbox as the public support channel, or replace it with your support email later.
+- Add a business mailbox, registered agent, or formal notice address before real orders if your launch requirements call for a public business address.
 - Review all policy text before taking real orders.
 
 ## Return Address Recommendation

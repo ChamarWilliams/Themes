@@ -1,8 +1,8 @@
 # Cookie Policy
 
-Last updated: [Insert Date]
+Last updated: June 18, 2026
 
-This Cookie Policy explains how [Store Name] uses cookies and similar technologies.
+This Cookie Policy explains how Shop1 uses cookies and similar technologies.
 
 ## What Cookies Are
 
@@ -31,5 +31,4 @@ If we enable tools that require cookie consent or opt-out choices, we will provi
 
 Cookie questions:
 
-[Support Email]
-
+Use Shopify Inbox through the chat or contact option shown on the store.

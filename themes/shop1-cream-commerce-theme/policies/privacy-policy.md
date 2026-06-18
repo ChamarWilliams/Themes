@@ -1,8 +1,8 @@
 # Privacy Policy
 
-Last updated: [Insert Date]
+Last updated: June 18, 2026
 
-[Store Name] ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our Shopify store, place an order, contact support, sign in to a customer account, or interact with our marketing.
+Shop1 ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our Shopify store, place an order, contact support, sign in to a customer account, or interact with our marketing.
 
 ## Information We Collect
 
@@ -71,7 +71,7 @@ Depending on where you live, you may have rights to:
 - Opt out of certain marketing, targeted advertising, sale, or sharing.
 - Appeal a privacy decision where applicable.
 
-To make a request, contact us at [Support Email]. We may need to verify your identity before fulfilling a request.
+To make a request, contact us through Shopify Inbox. We may need to verify your identity before fulfilling a request.
 
 ## Email And SMS Marketing
 
@@ -103,6 +103,5 @@ We may update this Privacy Policy from time to time. The updated version will be
 
 For privacy questions or requests, contact:
 
-[Store Name]  
-[Support Email]  
-[Business Mailing Address or Registered Agent Address]
+Shop1  
+Use Shopify Inbox through the chat or contact option shown on the store.

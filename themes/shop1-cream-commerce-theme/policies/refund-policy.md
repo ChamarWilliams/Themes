@@ -1,8 +1,8 @@
 # No Returns And Refund Policy
 
-Last updated: [Insert Date]
+Last updated: June 18, 2026
 
-Thank you for shopping with [Store Name]. We are starting with a no-return model so we can keep pricing, fulfillment, and support simple while the store is new.
+Thank you for shopping with Shop1. We are starting with a no-return model so we can keep pricing, fulfillment, and support simple while the store is new.
 
 ## No Returns
 
@@ -28,7 +28,7 @@ We do not publish or use a personal home address for returns.
 
 Contact us as soon as possible if an item arrives damaged, defective, incorrect, incomplete, missing, or materially different from the listing.
 
-Email [Support Email] with:
+Contact us through Shopify Inbox with:
 
 - Order number
 - Email used at checkout
@@ -72,4 +72,4 @@ Please contact us first so we can try to resolve the issue. Filing a chargeback 
 
 Refund and support questions:
 
-[Support Email]
+Use Shopify Inbox through the chat or contact option shown on the store.
