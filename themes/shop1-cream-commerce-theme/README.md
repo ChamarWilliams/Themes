@@ -10,6 +10,8 @@ The website name is still undecided, so the theme defaults to `Name TBD` and exp
 
 This variant is the warm cream storefront: soft cream background, warm neutral panels, forest accents, and a calmer curated-shopping feel.
 
+This is specifically for the Shopify website storefront. When connected through Shopify's GitHub integration, this theme must live at the branch root so Shopify can find `layout/theme.liquid`.
+
 ## Design Basis
 
 The layout is informed by high-traffic ecommerce patterns:
