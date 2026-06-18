@@ -13,7 +13,7 @@ Before launch, configure Shopify Admin policies with your final business details
 
 - Privacy Policy
 - Terms of Service
-- Refund/Return Policy
+- No Returns and Refund Policy
 - Shipping Policy
 - Contact page
 
@@ -21,16 +21,19 @@ Recommended defaults:
 
 - Keep customer login optional.
 - Keep guest checkout enabled.
-- Offer eligible 30-day returns.
+- Start with no buyer-remorse returns and no exchanges.
+- Keep refunds/replacements available for damaged, defective, wrong, missing, unshipped, or materially inaccurate orders.
 - Use estimated delivery language.
 - Add a real support email.
 - Review all policy text before taking real orders.
 
 ## Return Address Recommendation
 
-Do not use a personal home address.
+Do not use a personal home address, and do not publish a return address at launch.
 
-Use one of these instead:
+Because the launch policy is no returns, the default should be to resolve approved issues without requiring the customer to mail the item back.
+
+If you later decide to accept physical returns, use one of these instead:
 
 - Commercial Mail Receiving Agency (CMRA) or virtual mailbox that accepts parcels.
 - UPS Store or similar business mailbox that accepts returns.
@@ -38,6 +41,6 @@ Use one of these instead:
 - Supplier-authorized return destination only when the supplier explicitly supports customer returns.
 - No-return-needed resolution for low-cost damaged items when replacement/refund is cheaper than return shipping.
 
-Policy language should require customers to contact support first and wait for return authorization before sending anything back.
+Policy language should say customers must not send products back unless you later approve a physical-return process in writing.
 
 This is an operational checklist, not legal advice.

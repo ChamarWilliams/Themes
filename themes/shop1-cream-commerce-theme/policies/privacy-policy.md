@@ -9,29 +9,29 @@ Last updated: [Insert Date]
 We may collect:
 
 - Contact information, such as name, email address, phone number, billing address, and shipping address.
-- Order information, such as products purchased, order value, payment status, delivery details, returns, refunds, and customer support history.
+- Order information, such as products purchased, order value, payment status, delivery details, refunds, and customer support history.
 - Account information, if you choose to sign in or create a customer account.
 - Device and usage information, such as IP address, browser type, device type, pages viewed, referral links, cart activity, and approximate location.
 - Cookie and tracking information used for cart, checkout, analytics, fraud prevention, advertising, and store improvement.
-- Communications you send to us, including support requests, return requests, product questions, and feedback.
+- Communications you send to us, including support requests, refund requests, product questions, and feedback.
 
 ## How We Use Information
 
 We use information to:
 
 - Process and fulfill orders.
-- Provide checkout, payment, shipping, returns, refunds, and customer support.
+- Provide checkout, payment, shipping, refunds, and customer support.
 - Save cart and session information.
 - Maintain optional customer accounts and order history.
 - Detect, prevent, and investigate fraud, abuse, chargebacks, and security issues.
 - Improve products, product listings, store navigation, and customer experience.
-- Send transactional messages, such as order confirmations, shipping updates, return updates, and support replies.
+- Send transactional messages, such as order confirmations, shipping updates, refund updates, and support replies.
 - Send marketing messages only where permitted or where you have opted in.
 - Comply with legal, tax, accounting, payment processor, shipping, and platform obligations.
 
 ## Shopify And Service Providers
 
-Our store is hosted by Shopify. Shopify processes customer and order information so the store can operate. We may also use payment processors, shipping carriers, fulfillment partners, analytics tools, email/SMS tools, fraud prevention tools, advertising platforms, customer support tools, and return-management tools.
+Our store is hosted by Shopify. Shopify processes customer and order information so the store can operate. We may also use payment processors, shipping carriers, fulfillment partners, analytics tools, email/SMS tools, fraud prevention tools, advertising platforms, and customer support tools.
 
 These providers may process information only as needed to provide their services, comply with law, prevent fraud, or operate their platforms.
 
@@ -53,7 +53,7 @@ We may share information with:
 
 - Shopify and Shopify apps used to operate the store.
 - Payment processors and fraud prevention providers.
-- Shipping carriers, fulfillment partners, suppliers, and return processors.
+- Shipping carriers, fulfillment partners, and suppliers.
 - Customer support, email, SMS, analytics, and advertising providers.
 - Professional advisors, such as accountants, legal advisors, and compliance providers.
 - Government, law enforcement, regulators, or courts when required by law.
@@ -77,11 +77,11 @@ To make a request, contact us at [Support Email]. We may need to verify your ide
 
 You can unsubscribe from marketing emails by using the unsubscribe link in the message. If SMS marketing is enabled, you can opt out using the instructions in the message.
 
-Transactional messages about orders, shipping, returns, refunds, account activity, and support may still be sent where necessary.
+Transactional messages about orders, shipping, refunds, account activity, and support may still be sent where necessary.
 
 ## Data Retention
 
-We keep information as long as needed to operate the store, provide support, process returns/refunds, prevent fraud, meet tax/accounting/legal obligations, resolve disputes, and enforce policies.
+We keep information as long as needed to operate the store, provide support, process refunds, prevent fraud, meet tax/accounting/legal obligations, resolve disputes, and enforce policies.
 
 ## Security
 
@@ -106,4 +106,3 @@ For privacy questions or requests, contact:
 [Store Name]  
 [Support Email]  
 [Business Mailing Address or Registered Agent Address]
-
