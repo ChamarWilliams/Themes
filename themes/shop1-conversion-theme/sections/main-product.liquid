@@ -1,0 +1,31 @@
+<section class="product-page">
+  <div class="product-gallery">
+    {% if product.featured_media %}
+      {{ product.featured_media | image_url: width: 1200 | image_tag: loading: 'eager', sizes: '(min-width: 900px) 55vw, 100vw', widths: '500,800,1200', alt: product.title }}
+    {% endif %}
+  </div>
+  <div class="product-buybox">
+    <p class="breadcrumb"><a href="{{ routes.collections_url }}">Collections</a> / {{ product.type }}</p>
+    <h1>{{ product.title }}</h1>
+    {% render 'price', product: product %}
+    <div class="product-summary">{{ product.description }}</div>
+    {% form 'product', product %}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <button class="button-primary add-to-cart" type="submit" {% unless product.available %}disabled{% endunless %}>
+        {% if product.available %}Add to cart{% else %}Sold out{% endif %}
+      </button>
+    {% endform %}
+    <div class="buybox-notes">
+      <span>Draft-tested product data</span>
+      <span>Category and media reviewed</span>
+      <span>Secure Shopify checkout</span>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Main product",
+  "settings": []
+}
+{% endschema %}
