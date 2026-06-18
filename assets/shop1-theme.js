@@ -37,16 +37,103 @@ document.addEventListener('keydown', event => {
   if (event.key === 'Escape') setDrawer(false);
 });
 
+const cookieStorageKey = 'shop1-cookie-notice';
 const cookieBanner = document.querySelector('[data-cookie-banner]');
-const cookieAccept = document.querySelector('[data-cookie-accept]');
 
-if (cookieBanner && window.localStorage.getItem('shop1-cookie-notice') !== 'accepted') {
+function getCookieNoticeAccepted() {
+  try {
+    return window.localStorage.getItem(cookieStorageKey) === 'accepted';
+  } catch (error) {
+    return document.cookie.includes(`${cookieStorageKey}=accepted`);
+  }
+}
+
+function setCookieNoticeAccepted() {
+  try {
+    window.localStorage.setItem(cookieStorageKey, 'accepted');
+  } catch (error) {
+    document.cookie = `${cookieStorageKey}=accepted; path=/; max-age=31536000; SameSite=Lax`;
+  }
+}
+
+function hideCookieBanner() {
+  if (!cookieBanner) return;
+  setCookieNoticeAccepted();
+  cookieBanner.classList.remove('is-visible');
+  cookieBanner.classList.add('is-dismissing');
+  window.setTimeout(() => {
+    cookieBanner.hidden = true;
+    cookieBanner.classList.remove('is-dismissing');
+  }, 200);
+}
+
+if (cookieBanner && !getCookieNoticeAccepted()) {
   cookieBanner.hidden = false;
+  window.requestAnimationFrame(() => cookieBanner.classList.add('is-visible'));
 }
 
-if (cookieAccept) {
-  cookieAccept.addEventListener('click', () => {
-    window.localStorage.setItem('shop1-cookie-notice', 'accepted');
-    if (cookieBanner) cookieBanner.hidden = true;
-  });
+document.addEventListener('click', event => {
+  const acceptButton = event.target.closest('[data-cookie-accept]');
+  if (acceptButton) hideCookieBanner();
+});
+
+const policyModal = document.querySelector('[data-policy-modal]');
+const policyTitle = document.querySelector('[data-policy-title]');
+const policyBody = document.querySelector('[data-policy-body]');
+const policyContentScript = document.querySelector('[data-policy-content]');
+let policyContent = {};
+
+if (policyContentScript) {
+  try {
+    policyContent = JSON.parse(policyContentScript.textContent);
+  } catch (error) {
+    policyContent = {};
+  }
 }
+
+function openPolicy(policyKey) {
+  const policy = policyContent[policyKey];
+  if (!policyModal || !policyTitle || !policyBody || !policy) return;
+  policyTitle.textContent = policy.title;
+  policyBody.innerHTML = policy.html;
+  policyModal.hidden = false;
+  window.requestAnimationFrame(() => policyModal.classList.add('is-open'));
+  document.body.classList.add('drawer-open');
+}
+
+function closePolicy() {
+  if (!policyModal) return;
+  policyModal.classList.remove('is-open');
+  document.body.classList.remove('drawer-open');
+  window.setTimeout(() => {
+    policyModal.hidden = true;
+  }, 200);
+}
+
+function openPolicyFromHash() {
+  const match = window.location.hash.match(/^#policy-(.+)$/);
+  if (match) openPolicy(match[1]);
+}
+
+document.addEventListener('click', event => {
+  const policyLink = event.target.closest('[data-policy-open]');
+  if (policyLink) {
+    event.preventDefault();
+    const policyKey = policyLink.getAttribute('data-policy-open');
+    window.history.replaceState(null, '', `#policy-${policyKey}`);
+    openPolicy(policyKey);
+    return;
+  }
+
+  if (event.target.closest('[data-policy-close]')) {
+    event.preventDefault();
+    closePolicy();
+  }
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closePolicy();
+});
+
+window.addEventListener('hashchange', openPolicyFromHash);
+openPolicyFromHash();

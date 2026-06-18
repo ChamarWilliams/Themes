@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "No Returns",
+        "heading": "No Returns and Refund Policy",
+        "body": "<p>We do not accept product returns for buyer remorse, changed mind, ordering the wrong item, dislike of color/size/style, no longer needing the item, duplicate orders, or similar reasons.</p><p>We do not offer exchanges at launch. If you want a different item, size, color, or variant, place a new order after reviewing the product details.</p><p>Do not send products to the address on the package, the supplier, a carrier address, or any address found online. Because we are not accepting returns, unauthorized packages may be refused, lost, delayed, destroyed, or ineligible for refund. We do not publish or use a personal home address for returns.</p><p>If an item arrives damaged, defective, incorrect, incomplete, missing, or materially different from the listing, contact us through Shopify Inbox as soon as possible with your order number, checkout email, product name, clear issue description, and photos or video of the product, packaging, shipping label, and issue.</p><p>If approved, we may offer a replacement, refund, partial refund, store credit, discount code, or another reasonable resolution. We may resolve the issue without requiring the item to be returned.</p><p>If we cannot fulfill an order or cannot ship within the stated timeframe, we will notify you and provide options as required, which may include canceling for a refund.</p><p>Customers are responsible for entering a complete and accurate shipping address. If a package is delayed, lost, returned, refused, or undeliverable because of an incorrect address, missing delivery details, refusal, or failure to pick up the package, we may be unable to refund the order.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}

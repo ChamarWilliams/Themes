@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Shipping",
+        "heading": "Shipping Policy",
+        "body": "<p>Orders are processed after payment confirmation, fraud review, and supplier or fulfillment availability checks. Standard processing time is usually 2 to 5 business days. Orders placed on weekends or holidays may begin processing on the next business day.</p><p>Standard estimated delivery time is usually 7 to 20 business days after processing. Delivery times shown on product pages, checkout, messages, emails, advertisements, or order updates are estimates unless expressly stated as guaranteed.</p><p>Shop1 is configured for United States orders first. International shipping may be added later. Some products may be unavailable in certain states, territories, countries, regions, PO boxes, military addresses, remote locations, or restricted destinations due to carrier limits, supplier restrictions, legal restrictions, or product restrictions.</p><p>When tracking is available, tracking information will be sent through Shopify order updates, email, SMS if enabled, or the order status page. Tracking may take several business days to update after a label is created.</p><p>If an order contains multiple items, items may ship separately from different locations. You may receive more than one package, tracking number, or delivery date.</p><p>If we cannot ship within the stated timeframe, we will notify you and provide options as required, which may include consenting to the delay or canceling for a refund.</p><p>Customers are responsible for entering a complete and accurate shipping address at checkout. If you entered the wrong address, contact us immediately through Shopify Inbox. We cannot guarantee changes after an order has been processed, submitted to a supplier, packed, labeled, or shipped.</p><p>If tracking shows delivered but you did not receive the package, check the delivery address, delivery location, household members, neighbors, building staff, front desk staff, mailroom staff, and carrier before contacting us through Shopify Inbox.</p><p>If an item arrives damaged, incorrect, incomplete, missing, or materially different from the listing, contact us through Shopify Inbox as soon as possible with your order number, product name, tracking number, clear description, and photos or video.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
