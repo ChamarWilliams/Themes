@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Shop1 white commerce brand",
+    "settings": [
+      {
+        "type": "text",
+        "id": "brand_name",
+        "label": "Brand name",
+        "default": "Name TBD"
+      },
+      {
+        "type": "text",
+        "id": "announcement_text",
+        "label": "Announcement text",
+        "default": "Clean marketplace browsing for practical finds"
+      },
+      {
+        "type": "image_picker",
+        "id": "hero_image",
+        "label": "Homepage hero image"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent color",
+        "default": "#047857"
+      }
+    ]
+  }
+]
