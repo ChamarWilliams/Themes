@@ -1,0 +1,84 @@
+<section class="search-page">
+  <div class="search-hero" data-animate>
+    <div>
+      <p class="eyebrow">Search Trefelle</p>
+      <h1>Find practical home goods faster</h1>
+      <p>Search across Trefelle products, or use a quick browse path while the first collection is being prepared.</p>
+    </div>
+    <form class="search-page-form" action="{{ routes.search_url }}" method="get" role="search">
+      <input type="hidden" name="type" value="product">
+      <label for="SearchPageInput">Product search</label>
+      <div>
+        <input id="SearchPageInput" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Try organizer, office, cable, travel">
+        <button type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="search-quick-links" aria-label="Suggested searches" data-animate>
+    <a href="{{ routes.search_url }}?type=product&q=organizer">Organizers</a>
+    <a href="{{ routes.search_url }}?type=product&q=office">Office</a>
+    <a href="{{ routes.search_url }}?type=product&q=cable">Cable management</a>
+    <a href="{{ routes.search_url }}?type=product&q=travel">Travel</a>
+    <a href="{{ routes.collections_url }}">All collections</a>
+  </div>
+
+  {% if search.performed %}
+    <div class="section-heading search-results-heading" data-animate>
+      <div>
+        <p class="eyebrow">Results</p>
+        <h2>{{ search.results_count }} result{% unless search.results_count == 1 %}s{% endunless %} for "{{ search.terms | escape }}"</h2>
+      </div>
+      <a href="{{ routes.search_url }}">Clear search</a>
+    </div>
+
+    {% paginate search.results by 12 %}
+      <div class="product-grid">
+        {% for item in search.results %}
+          {% if item.object_type == 'product' %}
+            {% render 'product-card', product: item %}
+          {% endif %}
+        {% else %}
+          <div class="empty-state" data-animate>
+            <p class="eyebrow">Nothing yet</p>
+            <h2>No products matched this search</h2>
+            <p>Trefelle is still being stocked. Try a broader search or check back when the first product listings are ready.</p>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if paginate.pages > 1 %}
+        <nav class="pagination" role="navigation" aria-label="Search pages">
+          {% if paginate.previous %}
+            <a href="{{ paginate.previous.url }}">Previous</a>
+          {% endif %}
+          <span>Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+          {% if paginate.next %}
+            <a href="{{ paginate.next.url }}">Next</a>
+          {% endif %}
+        </nav>
+      {% endif %}
+    {% endpaginate %}
+  {% else %}
+    <div class="search-intent-grid" data-animate>
+      <div>
+        <strong>Useful first</strong>
+        <span>Product pages are designed around clear details, pricing, and shipping expectations.</span>
+      </div>
+      <div>
+        <strong>Curated slowly</strong>
+        <span>Items are reviewed before being shown, so the storefront can stay focused instead of crowded.</span>
+      </div>
+      <div>
+        <strong>Convenient browsing</strong>
+        <span>Search, category drawer, cart, and policy details are kept close without extra page hopping.</span>
+      </div>
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Search"
+}
+{% endschema %}
