@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Shipping",
+        "heading": "Shipping Policy",
+        "body": "<p>Orders are processed after payment confirmation. Delivery times shown on product pages or checkout are estimates and may vary by supplier, destination, carrier, and inventory availability.</p><p>If an order cannot ship within the stated timeframe, we will notify the customer and provide available options, which may include waiting for the delayed shipment or canceling for a refund.</p><p>Customers are responsible for entering accurate shipping information. Contact us quickly if an address needs to be corrected.</p><p>Do not publish this template until your actual processing times, carrier details, shipping regions, and supplier fulfillment timeframes are added.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
