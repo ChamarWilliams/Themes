@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Returns",
+        "heading": "Return and Refund Policy",
+        "body": "<p>We accept eligible returns within 30 days of delivery. Items must be unused, in original condition, and returned with original packaging when possible. Contact us before sending any return.</p><p>Damaged, defective, or incorrect items should be reported promptly with photos and order details. If approved, we will replace, refund, or otherwise resolve the issue.</p><p>For buyer's remorse returns, customers may be responsible for return shipping. Shipping fees may be non-refundable unless the return is due to our error or a defective item.</p><p>Some items may be final sale, including hygiene products, customized items, perishable goods, or products that cannot be safely resold. Do not publish this template until final exclusions and return address handling are reviewed.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
