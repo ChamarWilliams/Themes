@@ -2,7 +2,7 @@
 
 Last updated: June 18, 2026
 
-This Shipping Policy explains how Shop1 processes, ships, tracks, and handles delivery issues for online orders.
+This Shipping Policy explains how Trefelle processes, ships, tracks, and handles delivery issues for online orders.
 
 ## Order Processing
 
@@ -18,11 +18,11 @@ Standard estimated delivery time is usually 7 to 20 business days after processi
 
 Delivery times shown on product pages, checkout, messages, emails, advertisements, or order updates are estimates unless expressly stated as guaranteed.
 
-Because Shop1 may use supplier or fulfillment partner shipping, delivery time can vary by item, destination, carrier, customs review, and local delivery conditions.
+Because Trefelle may use supplier or fulfillment partner shipping, delivery time can vary by item, destination, carrier, customs review, and local delivery conditions.
 
 ## Shipping Locations
 
-Shop1 is configured for United States orders first.
+Trefelle is configured for United States orders first.
 
 International shipping may be added later. If international checkout is available, customers may be responsible for customs duties, import taxes, brokerage fees, local charges, and compliance with local import rules unless checkout specifically states otherwise.
 

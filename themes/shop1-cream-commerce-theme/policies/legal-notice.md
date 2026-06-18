@@ -2,11 +2,11 @@
 
 Last updated: June 18, 2026
 
-This Legal Notice applies to Shop1 and the Shopify store where this notice is published.
+This Legal Notice applies to Trefelle and the Shopify store where this notice is published.
 
 ## Store Operator
 
-Shop1 is an online retail storefront operated through Shopify.
+Trefelle is an online retail storefront operated through Shopify.
 
 The final public business name, legal entity name, business mailing address, registered agent address, or other required business disclosure should be configured before accepting real customer orders.
 
@@ -14,17 +14,17 @@ Do not use a personal home address as the public store address.
 
 ## Customer Support Contact
 
-For customer support, order questions, shipping issues, product questions, refund review, damaged items, wrong items, missing items, or account questions, contact Shop1 through Shopify Inbox using the chat or contact option shown on the store.
+For customer support, order questions, shipping issues, product questions, refund review, damaged items, wrong items, missing items, or account questions, contact Trefelle through Shopify Inbox using the chat or contact option shown on the store.
 
 ## Legal Or Formal Notices
 
 Legal or formal notices should be sent through Shopify Inbox unless and until a separate business mailing address, registered agent, attorney, or formal notice address is published by the store operator.
 
-Shop1 may request identity verification, order verification, account verification, or additional information before responding to legal, privacy, payment, fraud, intellectual property, or order-related requests.
+Trefelle may request identity verification, order verification, account verification, or additional information before responding to legal, privacy, payment, fraud, intellectual property, or order-related requests.
 
 ## Intellectual Property
 
-Store content, page design, product copy, product media, graphics, logos, code, and other materials may be owned by Shop1, Shopify, suppliers, licensors, or content providers.
+Store content, page design, product copy, product media, graphics, logos, code, and other materials may be owned by Trefelle, Shopify, suppliers, licensors, or content providers.
 
 If you believe content on the store infringes your rights, contact us through Shopify Inbox with enough detail to identify the content, the claimed rights, your contact information, and the action requested.
 
@@ -32,7 +32,7 @@ If you believe content on the store infringes your rights, contact us through Sh
 
 Products should be used only as intended and according to instructions, warnings, manuals, labels, compatibility notes, age guidance, and manufacturer guidance.
 
-Shop1 may remove, edit, cancel, restrict, or decline products or orders when required by law, supplier limitation, platform policy, carrier restriction, safety concern, fraud risk, or operational issue.
+Trefelle may remove, edit, cancel, restrict, or decline products or orders when required by law, supplier limitation, platform policy, carrier restriction, safety concern, fraud risk, or operational issue.
 
 ## Platform Notice
 

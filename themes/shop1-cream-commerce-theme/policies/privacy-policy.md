@@ -2,7 +2,7 @@
 
 Last updated: June 18, 2026
 
-Shop1 ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our Shopify store, place an order, contact support, sign in to a customer account, or interact with our marketing.
+Trefelle ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect information when you visit our Shopify store, place an order, contact support, sign in to a customer account, or interact with our marketing.
 
 ## Information We Collect
 
@@ -103,5 +103,5 @@ We may update this Privacy Policy from time to time. The updated version will be
 
 For privacy questions or requests, contact:
 
-Shop1  
+Trefelle  
 Use Shopify Inbox through the chat or contact option shown on the store.

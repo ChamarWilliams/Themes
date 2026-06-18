@@ -2,7 +2,7 @@
 
 Last updated: June 18, 2026
 
-Thank you for shopping with Shop1. We are starting with a no-return model so we can keep pricing, fulfillment, and support simple while the store is new.
+Thank you for shopping with Trefelle. We are starting with a no-return model so we can keep pricing, fulfillment, and support simple while the store is new.
 
 ## No Returns
 

@@ -1,12 +1,12 @@
-# Shop1 Cream Commerce Theme
+# Trefelle Cream Commerce Theme
 
 Starter Shopify theme for:
 
 ```text
-E-Commerce Branch > Dropshipping Department > Shopify > Shop1
+E-Commerce Branch > Dropshipping Department > Shopify > Trefelle
 ```
 
-The website name is still undecided, so the theme defaults to `Name TBD` and exposes `brand_name` in Shopify theme settings.
+The storefront brand is `Trefelle`. The theme exposes `brand_name` in Shopify theme settings in case the final public display name needs a small adjustment.
 
 This variant is the warm cream storefront: soft cream background, warm neutral panels, forest accents, and a calmer curated-shopping feel.
 
@@ -27,4 +27,4 @@ It is inspired by current marketplace UX patterns from high-traffic commerce sit
 
 ## Shopify Upload
 
-Upload the theme source folder or `shop1-conversion-theme.zip` through Shopify theme tools when ready. Do not publish it live until brand name, homepage imagery, menus, and policies are reviewed.
+Upload the theme source folder or `shop1-cream-commerce-theme.zip` through Shopify theme tools when ready. Do not publish it live until homepage imagery, menus, and policies are reviewed.

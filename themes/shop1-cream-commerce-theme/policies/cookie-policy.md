@@ -2,7 +2,7 @@
 
 Last updated: June 18, 2026
 
-This Cookie Policy explains how Shop1 uses cookies and similar technologies.
+This Cookie Policy explains how Trefelle uses cookies and similar technologies.
 
 ## What Cookies Are
 

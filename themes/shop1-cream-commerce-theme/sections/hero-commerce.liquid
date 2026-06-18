@@ -7,9 +7,10 @@
     {% endif %}
   </div>
   <div class="hero-content">
-    <p class="eyebrow">Shop1 curated finds</p>
-    <h1>{{ settings.brand_name | default: 'Name TBD' }}</h1>
-    <p>Practical products organized for quick discovery, clear comparison, and confident checkout.</p>
+    <img class="hero-mark" src="{{ 'trefelle-logo-mark.png' | asset_url }}" alt="" loading="eager">
+    <p class="eyebrow">Premium home goods</p>
+    <h1>{{ settings.brand_name | default: 'Trefelle' }}</h1>
+    <p>Softly curated home essentials organized for quick discovery, clear comparison, and confident checkout.</p>
     <div class="hero-actions">
       <a class="button-primary" href="{{ routes.collections_url }}">Browse categories</a>
       <a class="button-secondary" href="{{ routes.search_url }}">Search store</a>
