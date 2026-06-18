@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div>
+    <strong>{{ settings.brand_name | default: shop.name }}</strong>
+    <p>Curated product drafts and practical everyday finds.</p>
+  </div>
+  <nav aria-label="Footer">
+    <a href="{{ routes.search_url }}">Search</a>
+    <a href="{{ routes.collections_url }}">Collections</a>
+    <a href="{{ routes.cart_url }}">Cart</a>
+  </nav>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}
