@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Privacy",
+        "heading": "Privacy Policy",
+        "body": "<p>We collect information needed to process orders, provide customer support, improve the shopping experience, and operate secure checkout. This can include contact details, shipping details, order information, device information, cookies, and analytics data.</p><p>We use essential cookies for cart and checkout. If analytics or advertising tools are enabled, they may use cookies or similar technologies. Customers can contact us to request access, correction, or deletion of personal information where applicable.</p><p>Do not publish this template until your business name, contact email, analytics tools, advertising platforms, and data-sharing practices are filled in and reviewed.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
