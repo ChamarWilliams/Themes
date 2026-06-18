@@ -1,0 +1,12 @@
+<article class="product-card">
+  <a class="product-card-media" href="{{ product.url }}">
+    {% if product.featured_media %}
+      {{ product.featured_media | image_url: width: 600 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 25vw, 50vw', widths: '250,400,600', alt: product.title }}
+    {% endif %}
+  </a>
+  <div class="product-card-body">
+    <a class="product-title" href="{{ product.url }}">{{ product.title }}</a>
+    {% render 'price', product: product %}
+    <p>{{ product.type }}</p>
+  </div>
+</article>

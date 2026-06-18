@@ -1,0 +1,25 @@
+<section class="hero-commerce">
+  <div class="hero-media">
+    {% if settings.hero_image != blank %}
+      {{ settings.hero_image | image_url: width: 1800 | image_tag: loading: 'eager', sizes: '100vw', widths: '600,900,1200,1800', alt: settings.brand_name }}
+    {% else %}
+      <div class="hero-fallback"></div>
+    {% endif %}
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">Shop1 curated finds</p>
+    <h1>{{ settings.brand_name | default: 'Name TBD' }}</h1>
+    <p>Practical products organized for quick discovery, clear comparison, and confident checkout.</p>
+    <div class="hero-actions">
+      <a class="button-primary" href="{{ routes.collections_url }}">Browse categories</a>
+      <a class="button-secondary" href="{{ routes.search_url }}">Search store</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Commerce hero",
+  "settings": []
+}
+{% endschema %}

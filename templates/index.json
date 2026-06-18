@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-commerce"
+    },
+    "trust": {
+      "type": "trust-bar"
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Popular practical finds"
+      }
+    }
+  },
+  "order": ["hero", "trust", "featured"]
+}
