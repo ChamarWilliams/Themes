@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Support",
+        "heading": "Contact Us",
+        "body": "<p>For order questions, returns, shipping issues, product support, account questions, or damaged/incorrect items, contact us at [Support Email].</p><p>For faster help, include your order number, email used at checkout, product name, clear description of the issue, photos or videos if the item is damaged/defective/incorrect, and tracking number if available.</p><p>Estimated response time: [Insert Response Time]. Response times may be longer during weekends, holidays, launches, or high support volume.</p><p>Do not send products to any address unless we first approve the return and provide return instructions. We do not publish a personal home address for returns. Approved returns may be sent to a return center, commercial mailbox, fulfillment partner, supplier-authorized return location, or another approved business return destination.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}

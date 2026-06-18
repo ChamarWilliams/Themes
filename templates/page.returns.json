@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Returns",
+        "heading": "Return and Refund Policy",
+        "body": "<p>Eligible items may be returned within 30 days after delivery. Items must be unused, unworn, undamaged, and in the same condition received, with original packaging, accessories, manuals, tags, and inserts when applicable.</p><p>Contact us at [Support Email] before sending any return. Include your order number, email used at checkout, item name, reason for return, and photos if the item is damaged, defective, incorrect, or not as described.</p><p>Do not send products to the address on the package, the supplier, or any address found online unless we specifically provide that address in writing. Returns sent without approval may be refused, delayed, lost, or ineligible for refund.</p><p>After approval, we will provide return instructions and the correct return destination. This may be a return center, fulfillment partner, supplier-authorized location, or business mailbox used for returns.</p><p>For damaged, defective, wrong, or missing items, contact us promptly with photos. If approved, we may offer a replacement, refund, partial refund, store credit, or another reasonable resolution.</p><p>For buyer-remorse returns, customers may be responsible for return shipping. Original shipping charges may be non-refundable unless the return is due to our error or a defective item.</p><p>Non-returnable items may include used, damaged, altered, washed, worn, or incomplete items; hygiene/personal care items; customized items; perishable goods; final sale items; gift cards; digital products; unauthorized returns; and items outside the return window.</p><p>Replace [Store Name] and [Support Email] before publishing this policy.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}

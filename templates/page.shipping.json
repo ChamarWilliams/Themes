@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "policy-content",
+      "settings": {
+        "eyebrow": "Shipping",
+        "heading": "Shipping Policy",
+        "body": "<p>Orders are processed after payment confirmation and fraud review. Processing time varies by product, supplier, inventory status, destination, holidays, and order volume. Estimated processing time: [Insert Processing Time].</p><p>Delivery times shown on product pages, checkout, emails, or advertisements are estimates unless expressly stated as guaranteed. Estimated delivery time: [Insert Estimated Delivery Range].</p><p>Because this store may use supplier or fulfillment partner shipping, delivery time can vary by item and destination. Some orders may ship in separate packages.</p><p>If we cannot ship within the stated timeframe, we will notify you and provide options as required, which may include consenting to the delay or canceling for a refund.</p><p>Customers are responsible for entering a complete and accurate shipping address. Contact [Support Email] immediately if an address needs correction. We cannot guarantee changes after an order has been processed or shipped.</p><p>If tracking shows delivered but you did not receive the package, check the delivery location, household members, neighbors, building staff, mailroom staff, and carrier before contacting support.</p><p>For international orders, customers may be responsible for customs duties, import taxes, brokerage fees, or local charges unless checkout specifically states otherwise.</p><p>Replace shipping regions, processing times, delivery estimates, and [Support Email] before publishing this policy.</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}
