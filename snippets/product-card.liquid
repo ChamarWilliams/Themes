@@ -17,6 +17,7 @@
         <form action="{{ routes.cart_add_url }}" method="post">
           <input type="hidden" name="id" value="{{ card_variant.id }}">
           <input type="hidden" name="quantity" value="1">
+          <input type="hidden" name="return_to" value="{{ routes.cart_url }}">
           <button class="button-primary quick-add-button" type="submit">Add to cart</button>
         </form>
       {% else %}

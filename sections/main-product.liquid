@@ -2,13 +2,15 @@
   <div class="product-main-area">
     <div class="product-gallery">
       {% if product.featured_media %}
-        {{ product.featured_media | image_url: width: 1000 | image_tag: loading: 'eager', sizes: '(min-width: 990px) 46vw, 100vw', widths: '420,700,1000', alt: product.title }}
+        {{ product.featured_media | image_url: width: 1100 | image_tag: class: 'product-main-image', loading: 'eager', sizes: '(min-width: 990px) 46vw, 100vw', widths: '420,700,900,1100', alt: product.title }}
       {% endif %}
       {% if product.media.size > 1 %}
         <div class="product-thumbnails" aria-label="Product photos">
-          {% for media in product.media limit: 5 %}
+          {% for media in product.media limit: 6 %}
             {% if media.preview_image %}
-              {{ media.preview_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,120,160', alt: product.title }}
+              <button class="product-thumbnail-button" type="button" data-product-thumbnail="{{ media.preview_image | image_url: width: 1100 }}" aria-label="Show product photo {{ forloop.index }}">
+                {{ media.preview_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,120,160', alt: product.title }}
+              </button>
             {% endif %}
           {% endfor %}
         </div>
@@ -28,6 +30,9 @@
       {% if lower_description contains 'manual review' %}
         {% assign show_original_description = false %}
       {% endif %}
+      {% if lower_description contains 'reviewed test draft' %}
+        {% assign show_original_description = false %}
+      {% endif %}
       {% if show_original_description %}
         <div class="product-summary rte">{{ product.description }}</div>
       {% else %}
@@ -35,11 +40,16 @@
           <p>{{ product.title }} is a practical Trefelle find selected for everyday use, clear value, and simple checkout.</p>
         </div>
       {% endif %}
+      <ul class="product-highlight-list">
+        <li>Selected for everyday convenience, visible pricing, and simple comparison.</li>
+        <li>Best for shoppers who want useful items without digging through crowded marketplaces.</li>
+        <li>Review photos, price, shipping, and taxes at checkout before payment.</li>
+      </ul>
 
       <div class="product-info-grid">
         <div>
           <strong>Why it works</strong>
-          <span>Useful, compact, and easy to compare before checkout.</span>
+          <span>Useful, compact, and easy to compare.</span>
         </div>
         <div>
           <strong>Good for</strong>
@@ -56,11 +66,12 @@
   <div class="product-buybox">
     <p class="breadcrumb"><a href="{{ routes.all_products_collection_url }}">All products</a>{% if product.type != blank %} / {{ product.type }}{% endif %}</p>
     <h1>{{ product.title }}</h1>
-    <div class="rating-row" aria-label="Store confidence rating">
-      <span class="rating-stars">★★★★★</span>
-      <span>4.7 rating estimate</span>
+    <div class="rating-row" aria-label="Trefelle product fit summary">
+      <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>Trefelle fit score</span>
       <a href="#ProductDetails">Details</a>
     </div>
+    <p class="review-note">No verified customer reviews yet. This page shows a store-side confidence summary until orders generate real feedback.</p>
     {% render 'price', product: product %}
     {% assign current_variant = product.selected_or_first_available_variant %}
     <div class="purchase-panel">
@@ -78,6 +89,7 @@
           <input type="hidden" name="id" value="{{ current_variant.id }}">
         {% endif %}
         <input type="hidden" name="quantity" value="1">
+        <input type="hidden" name="return_to" value="{{ routes.cart_url }}">
         <button class="button-primary add-to-cart" type="submit" {% unless product.available %}disabled{% endunless %}>
           {% if product.available %}Add to cart{% else %}Sold out{% endif %}
         </button>
@@ -105,7 +117,7 @@
     <div class="buybox-notes">
       <span>Cart saves in this browser.</span>
       <span>Buy now goes straight to checkout.</span>
-      <span>Secure Shopify checkout</span>
+      <span>Secure Shopify checkout.</span>
     </div>
     <div class="delivery-card">
       <strong>Delivery note</strong>
@@ -117,13 +129,14 @@
 <section id="ProductDetails" class="product-extra-section">
   <div class="product-extra-copy">
     <p class="eyebrow">Trefelle review</p>
-    <h2>Simple product details before you buy</h2>
+    <h2>Quick buying snapshot</h2>
     <p>We keep product pages focused on clear photos, visible pricing, practical use, and checkout confidence. If an item has limited supplier detail, Trefelle keeps the wording conservative instead of making claims that cannot be verified.</p>
   </div>
   <div class="product-detail-list">
     <div><strong>Product type</strong><span>{{ product.type | default: 'Everyday convenience' }}</span></div>
     <div><strong>Vendor</strong><span>{{ product.vendor | default: shop.name }}</span></div>
     <div><strong>Availability</strong><span>{% if product.available %}In stock{% else %}Sold out{% endif %}</span></div>
+    <div><strong>Reviews</strong><span>No verified reviews yet</span></div>
   </div>
 </section>
 
@@ -137,9 +150,9 @@
   </div>
   <div class="product-grid product-grid-compact">
     {% assign shown_recommendations = 0 %}
-    {% assign seen_recommendations = product.title | handleize | prepend: '|' | append: '|' %}
+    {% assign seen_recommendations = product.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
     {% for recommendation in collections.all.products %}
-      {% assign recommendation_key = recommendation.title | handleize | prepend: '|' | append: '|' %}
+      {% assign recommendation_key = recommendation.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
       {% unless seen_recommendations contains recommendation_key %}
         {% render 'product-card', product: recommendation %}
         {% assign seen_recommendations = seen_recommendations | append: recommendation_key %}

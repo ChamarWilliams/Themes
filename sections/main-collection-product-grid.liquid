@@ -16,7 +16,7 @@
   <div class="product-grid">
     {% assign seen_product_titles = '' %}
     {% for product in collection.products %}
-      {% assign product_key = product.title | handleize | prepend: '|' | append: '|' %}
+      {% assign product_key = product.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
       {% unless seen_product_titles contains product_key %}
         {% render 'product-card', product: product %}
         {% assign seen_product_titles = seen_product_titles | append: product_key %}
