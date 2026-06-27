@@ -6,7 +6,7 @@
       <span>{{ settings.brand_name | default: 'Trefelle' }}</span>
     </a>
     <form class="search" action="{{ routes.search_url }}" method="get" role="search">
-      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search home goods">
+      <input type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search tech, watches, home, travel">
       <button type="submit">Search</button>
     </form>
     <nav class="header-actions" aria-label="Store">
@@ -55,6 +55,8 @@
     <nav class="drawer-nav" aria-label="Category shortcuts">
       <a href="{{ routes.all_products_collection_url }}"><span>All products</span><small>Shop</small></a>
       <a href="{{ routes.collections_url }}"><span>Collections</span><small>Browse</small></a>
+      <a href="{{ routes.search_url }}?q=tech"><span>Tech accessories</span><small>Find</small></a>
+      <a href="{{ routes.search_url }}?q=watch"><span>Watches</span><small>Find</small></a>
       <a href="{{ routes.search_url }}?q=travel"><span>Travel</span><small>Find</small></a>
       <a href="{{ routes.search_url }}?q=office"><span>Office</span><small>Find</small></a>
       <a href="{{ routes.search_url }}?q=cable"><span>Cable management</span><small>Find</small></a>

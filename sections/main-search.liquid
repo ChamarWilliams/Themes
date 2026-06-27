@@ -2,14 +2,14 @@
   <div class="search-hero" data-animate>
     <div>
       <p class="eyebrow">Search Trefelle</p>
-      <h1>Find practical home goods faster</h1>
-      <p>Search across Trefelle products, or use a quick browse path while the first collection is being prepared.</p>
+      <h1>Find practical everyday products faster</h1>
+      <p>Search across Trefelle products, or use a quick browse path for tech, watches, travel, organizers, and daily convenience finds.</p>
     </div>
     <form class="search-page-form" action="{{ routes.search_url }}" method="get" role="search">
       <input type="hidden" name="type" value="product">
       <label for="SearchPageInput">Product search</label>
       <div>
-        <input id="SearchPageInput" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Try organizer, office, cable, travel">
+        <input id="SearchPageInput" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Try tech, watch, organizer, cable, travel">
         <button type="submit">Search</button>
       </div>
     </form>
@@ -17,6 +17,8 @@
 
   <div class="search-quick-links" aria-label="Suggested searches" data-animate>
     <a href="{{ routes.search_url }}?type=product&q=organizer">Organizers</a>
+    <a href="{{ routes.search_url }}?type=product&q=tech">Tech accessories</a>
+    <a href="{{ routes.search_url }}?type=product&q=watch">Watches</a>
     <a href="{{ routes.search_url }}?type=product&q=office">Office</a>
     <a href="{{ routes.search_url }}?type=product&q=cable">Cable management</a>
     <a href="{{ routes.search_url }}?type=product&q=travel">Travel</a>

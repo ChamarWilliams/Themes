@@ -12,7 +12,7 @@
         "type": "text",
         "id": "announcement_text",
         "label": "Announcement text",
-        "default": "Premium home goods with a softer kind of luck"
+        "default": "Everyday finds with a softer kind of luck"
       },
       {
         "type": "image_picker",
