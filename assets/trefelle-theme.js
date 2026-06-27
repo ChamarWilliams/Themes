@@ -141,3 +141,13 @@ document.addEventListener('keydown', event => {
 
 window.addEventListener('hashchange', openPolicyFromHash);
 openPolicyFromHash();
+
+document.addEventListener('click', event => {
+  const thumbnail = event.target.closest('[data-product-thumbnail]');
+  if (!thumbnail) return;
+  const mainImage = document.querySelector('.product-main-image');
+  const nextSource = thumbnail.getAttribute('data-product-thumbnail');
+  if (!mainImage || !nextSource) return;
+  mainImage.src = nextSource;
+  mainImage.removeAttribute('srcset');
+});
