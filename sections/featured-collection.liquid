@@ -1,16 +1,21 @@
-<section class="featured-products">
+<section id="FeaturedProducts" class="featured-products">
   <div class="section-heading">
-    <h2>{{ section.settings.heading }}</h2>
-    <a href="{{ routes.collections_url }}">View all</a>
+    <div>
+      <p class="eyebrow">Start here</p>
+      <h2>{{ section.settings.heading }}</h2>
+    </div>
+    <a class="section-link" href="{{ routes.all_products_collection_url }}">View all products</a>
   </div>
   {% assign selected_collection = section.settings.collection %}
   <div class="product-grid">
     {% if selected_collection != blank and selected_collection.products_count > 0 %}
-      {% for product in selected_collection.products limit: 8 %}
+      {% assign product_count = selected_collection.products_count %}
+      {% for product in selected_collection.products limit: 12 %}
         {% render 'product-card', product: product %}
       {% endfor %}
     {% elsif collections.all.products_count > 0 %}
-      {% for product in collections.all.products limit: 8 %}
+      {% assign product_count = collections.all.products_count %}
+      {% for product in collections.all.products limit: 12 %}
         {% render 'product-card', product: product %}
       {% endfor %}
     {% else %}
@@ -21,6 +26,11 @@
       </div>
     {% endif %}
   </div>
+  {% if product_count > 12 %}
+    <div class="browse-more">
+      <a class="button-primary button-large" href="{{ routes.all_products_collection_url }}">Browse every product</a>
+    </div>
+  {% endif %}
 </section>
 
 {% schema %}

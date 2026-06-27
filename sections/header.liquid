@@ -10,6 +10,7 @@
       <button type="submit">Search</button>
     </form>
     <nav class="header-actions" aria-label="Store">
+      <a class="header-shop-all" href="{{ routes.all_products_collection_url }}">Shop all</a>
       <button class="drawer-trigger" type="button" data-category-drawer-open aria-controls="CategoryDrawer" aria-expanded="false">Categories</button>
       {% if customer %}
         <a href="{{ routes.account_url }}">Account</a>
@@ -39,6 +40,10 @@
   {% assign category_menu = section.settings.category_menu %}
   {% if category_menu != blank and category_menu.links.size > 0 %}
     <nav class="drawer-nav" aria-label="Category menu">
+      <a href="{{ routes.all_products_collection_url }}">
+        <span>All products</span>
+        <small>Shop</small>
+      </a>
       {% for link in category_menu.links %}
         <a href="{{ link.url }}">
           <span>{{ link.title }}</span>
@@ -48,7 +53,8 @@
     </nav>
   {% else %}
     <nav class="drawer-nav" aria-label="Category shortcuts">
-      <a href="{{ routes.collections_url }}"><span>All collections</span><small>Browse</small></a>
+      <a href="{{ routes.all_products_collection_url }}"><span>All products</span><small>Shop</small></a>
+      <a href="{{ routes.collections_url }}"><span>Collections</span><small>Browse</small></a>
       <a href="{{ routes.search_url }}?q=travel"><span>Travel</span><small>Find</small></a>
       <a href="{{ routes.search_url }}?q=office"><span>Office</span><small>Find</small></a>
       <a href="{{ routes.search_url }}?q=cable"><span>Cable management</span><small>Find</small></a>
@@ -57,6 +63,7 @@
   {% endif %}
 
   <div class="drawer-quick-actions">
+    <a href="{{ routes.all_products_collection_url }}">Shop all</a>
     <a href="{{ routes.cart_url }}">View cart</a>
     {% if customer %}
       <a href="{{ routes.account_url }}">Orders</a>
