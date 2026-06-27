@@ -8,15 +8,24 @@
   </div>
   {% assign selected_collection = section.settings.collection %}
   <div class="product-grid">
+    {% assign seen_product_titles = '' %}
     {% if selected_collection != blank and selected_collection.products_count > 0 %}
       {% assign product_count = selected_collection.products_count %}
       {% for product in selected_collection.products limit: 12 %}
-        {% render 'product-card', product: product %}
+        {% assign product_key = product.title | handleize | prepend: '|' | append: '|' %}
+        {% unless seen_product_titles contains product_key %}
+          {% render 'product-card', product: product %}
+          {% assign seen_product_titles = seen_product_titles | append: product_key %}
+        {% endunless %}
       {% endfor %}
     {% elsif collections.all.products_count > 0 %}
       {% assign product_count = collections.all.products_count %}
       {% for product in collections.all.products limit: 12 %}
-        {% render 'product-card', product: product %}
+        {% assign product_key = product.title | handleize | prepend: '|' | append: '|' %}
+        {% unless seen_product_titles contains product_key %}
+          {% render 'product-card', product: product %}
+          {% assign seen_product_titles = seen_product_titles | append: product_key %}
+        {% endunless %}
       {% endfor %}
     {% else %}
       <div class="empty-state">

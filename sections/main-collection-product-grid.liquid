@@ -14,8 +14,13 @@
     </form>
   </div>
   <div class="product-grid">
+    {% assign seen_product_titles = '' %}
     {% for product in collection.products %}
-      {% render 'product-card', product: product %}
+      {% assign product_key = product.title | handleize | prepend: '|' | append: '|' %}
+      {% unless seen_product_titles contains product_key %}
+        {% render 'product-card', product: product %}
+        {% assign seen_product_titles = seen_product_titles | append: product_key %}
+      {% endunless %}
     {% else %}
       <div class="empty-state">
         <p class="eyebrow">Coming soon</p>
