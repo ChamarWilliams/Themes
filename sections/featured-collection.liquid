@@ -8,24 +8,15 @@
   </div>
   {% assign selected_collection = section.settings.collection %}
   <div class="product-grid">
-    {% assign seen_product_titles = '' %}
     {% if selected_collection != blank and selected_collection.products_count > 0 %}
       {% assign product_count = selected_collection.products_count %}
-      {% for product in selected_collection.products limit: 12 %}
-        {% assign product_key = product.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
-        {% unless seen_product_titles contains product_key %}
-          {% render 'product-card', product: product %}
-          {% assign seen_product_titles = seen_product_titles | append: product_key %}
-        {% endunless %}
+      {% for product in selected_collection.products limit: 10 %}
+        {% render 'product-card', product: product %}
       {% endfor %}
     {% elsif collections.all.products_count > 0 %}
       {% assign product_count = collections.all.products_count %}
-      {% for product in collections.all.products limit: 12 %}
-        {% assign product_key = product.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
-        {% unless seen_product_titles contains product_key %}
-          {% render 'product-card', product: product %}
-          {% assign seen_product_titles = seen_product_titles | append: product_key %}
-        {% endunless %}
+      {% for product in collections.all.products limit: 10 %}
+        {% render 'product-card', product: product %}
       {% endfor %}
     {% else %}
       <div class="empty-state">
@@ -35,7 +26,7 @@
       </div>
     {% endif %}
   </div>
-  {% if product_count > 12 %}
+  {% if product_count > 10 %}
     <div class="browse-more">
       <a class="button-primary button-large" href="{{ routes.all_products_collection_url }}">Browse every product</a>
     </div>

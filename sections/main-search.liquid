@@ -34,16 +34,11 @@
       <a href="{{ routes.search_url }}">Clear search</a>
     </div>
 
-    {% paginate search.results by 12 %}
+    {% paginate search.results by 20 %}
       <div class="product-grid">
-        {% assign seen_search_titles = '' %}
         {% for item in search.results %}
           {% if item.object_type == 'product' %}
-            {% assign search_key = item.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
-            {% unless seen_search_titles contains search_key %}
-              {% render 'product-card', product: item %}
-              {% assign seen_search_titles = seen_search_titles | append: search_key %}
-            {% endunless %}
+            {% render 'product-card', product: item %}
           {% endif %}
         {% else %}
           <div class="empty-state" data-animate>
