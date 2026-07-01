@@ -13,22 +13,36 @@
       </select>
     </form>
   </div>
-  <div class="product-grid">
-    {% assign seen_product_titles = '' %}
-    {% for product in collection.products %}
-      {% assign product_key = product.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
-      {% unless seen_product_titles contains product_key %}
-        {% render 'product-card', product: product %}
-        {% assign seen_product_titles = seen_product_titles | append: product_key %}
-      {% endunless %}
-    {% else %}
-      <div class="empty-state">
-        <p class="eyebrow">Coming soon</p>
-        <h2>No products available yet</h2>
-        <p>Trefelle is being prepared for carefully selected everyday finds. Products will appear here once the first listings are ready.</p>
-      </div>
-    {% endfor %}
-  </div>
+  {% paginate collection.products by 48 %}
+    <div class="product-grid">
+      {% assign seen_product_titles = '' %}
+      {% for product in collection.products %}
+        {% assign product_key = product.title | downcase | replace: '(new)', '' | replace: 'new ', '' | replace: '1pcs', '' | replace: '1pc', '' | replace: '2pcs', '' | replace: '2pc', '' | replace: '3pcs', '' | replace: '3pc', '' | replace: '10pcs', '' | replace: '10pc', '' | replace: 'for dogs cats', 'pet' | replace: 'for dog cat', 'pet' | handleize | truncate: 72, '' | prepend: '|' | append: '|' %}
+        {% unless seen_product_titles contains product_key %}
+          {% render 'product-card', product: product %}
+          {% assign seen_product_titles = seen_product_titles | append: product_key %}
+        {% endunless %}
+      {% else %}
+        <div class="empty-state">
+          <p class="eyebrow">Coming soon</p>
+          <h2>No products available yet</h2>
+          <p>Trefelle is being prepared for carefully selected everyday finds. Products will appear here once the first listings are ready.</p>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if paginate.pages > 1 %}
+      <nav class="pagination" role="navigation" aria-label="Product pages">
+        {% if paginate.previous %}
+          <a href="{{ paginate.previous.url }}">Previous</a>
+        {% endif %}
+        <span>Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+        {% if paginate.next %}
+          <a href="{{ paginate.next.url }}">Next</a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  {% endpaginate %}
 </section>
 
 {% schema %}
