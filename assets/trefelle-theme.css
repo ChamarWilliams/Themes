@@ -544,21 +544,21 @@ body.drawer-open {
 
 .category-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: var(--space-2);
 }
 
 .category-tile {
   display: grid;
   justify-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) 0;
+  gap: var(--space-1);
+  padding: var(--space-1) 0;
   color: var(--ink);
 }
 
 .category-tile-thumb {
-  width: 56px;
-  height: 56px;
+  width: 36px;
+  height: 36px;
   border-radius: var(--radius-pill);
   overflow: hidden;
   background: var(--soft);
@@ -578,10 +578,10 @@ body.drawer-open {
 }
 
 .category-tile span {
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 10.5px;
   text-align: center;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 /* -------------------------------------------------------------- trust bar */
@@ -1675,6 +1675,6 @@ body.drawer-open {
   }
 
   .category-tiles {
-    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
   }
 }
