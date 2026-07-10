@@ -1,17 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
-      "type": "hero-commerce"
+      "type": "hero-commerce",
+      "settings": {}
+    },
+    "categories": {
+      "type": "category-tiles",
+      "settings": {
+        "heading": "Shop by category"
+      }
     },
     "trust": {
-      "type": "trust-bar"
+      "type": "trust-bar",
+      "settings": {}
     },
     "featured": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Popular practical finds"
+        "anchor_id": "FeaturedProducts",
+        "eyebrow": "Start here",
+        "heading": "Popular practical finds",
+        "sort_by": "manual"
+      }
+    },
+    "new-arrivals": {
+      "type": "featured-collection",
+      "settings": {
+        "eyebrow": "Just added",
+        "heading": "New arrivals",
+        "sort_by": "created-descending"
+      }
+    },
+    "under-30": {
+      "type": "featured-collection",
+      "settings": {
+        "eyebrow": "Easy on the wallet",
+        "heading": "Under $30",
+        "sort_by": "manual",
+        "max_price": 30
       }
     }
   },
-  "order": ["hero", "trust", "featured"]
+  "order": [
+    "hero",
+    "categories",
+    "trust",
+    "featured",
+    "new-arrivals",
+    "under-30"
+  ]
 }

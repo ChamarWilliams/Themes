@@ -1,0 +1,46 @@
+<section class="category-tiles-section" data-animate>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Browse</p>
+      <h2>{{ section.settings.heading | default: "Shop by category" }}</h2>
+    </div>
+  </div>
+  <div class="category-tiles">
+    {% assign seen_types = "" %}
+    {% assign shown = 0 %}
+    {% for product in collections.all.products %}
+      {% if product.type == blank %}
+        {% continue %}
+      {% endif %}
+      {% assign type_key = product.type | handleize | prepend: "|" | append: "|" %}
+      {% if seen_types contains type_key %}
+        {% continue %}
+      {% endif %}
+      {% assign seen_types = seen_types | append: type_key %}
+      <a class="category-tile" href="{{ routes.search_url }}?q={{ product.type | url_encode }}&type=product">
+        {% if product.featured_media %}
+          {{ product.featured_media | image_url: width: 300 | image_tag: loading: 'lazy', widths: '150,220,300', alt: product.type }}
+        {% endif %}
+        <span>{{ product.type }}</span>
+      </a>
+      {% assign shown = shown | plus: 1 %}
+      {% if shown >= 8 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Category tiles",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop by category"
+    }
+  ]
+}
+{% endschema %}

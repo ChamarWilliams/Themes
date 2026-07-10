@@ -1,24 +1,40 @@
-<section id="FeaturedProducts" class="featured-products">
+<section id="{{ section.settings.anchor_id | default: section.id }}" class="featured-products">
   <div class="section-heading">
     <div>
-      <p class="eyebrow">Start here</p>
+      <p class="eyebrow">{{ section.settings.eyebrow | default: "Start here" }}</p>
       <h2>{{ section.settings.heading }}</h2>
     </div>
     <a class="section-link" href="{{ routes.all_products_collection_url }}">View all products</a>
   </div>
   {% assign selected_collection = section.settings.collection %}
+  {% assign max_price = section.settings.max_price | times: 100 %}
+  {% assign sort_mode = section.settings.sort_by %}
+
+  {% if selected_collection != blank and selected_collection.products_count > 0 %}
+    {% assign source_products = selected_collection.products %}
+  {% else %}
+    {% assign source_products = collections.all.products %}
+  {% endif %}
+
+  {% if sort_mode == "created-descending" %}
+    {% assign source_products = source_products | sort: "created_at" | reverse %}
+  {% elsif sort_mode == "price-ascending" %}
+    {% assign source_products = source_products | sort: "price" %}
+  {% endif %}
+
   <div class="product-grid">
-    {% if selected_collection != blank and selected_collection.products_count > 0 %}
-      {% assign product_count = selected_collection.products_count %}
-      {% for product in selected_collection.products limit: 10 %}
-        {% render 'product-card', product: product %}
-      {% endfor %}
-    {% elsif collections.all.products_count > 0 %}
-      {% assign product_count = collections.all.products_count %}
-      {% for product in collections.all.products limit: 10 %}
-        {% render 'product-card', product: product %}
-      {% endfor %}
-    {% else %}
+    {% assign shown = 0 %}
+    {% for product in source_products %}
+      {% if max_price > 0 and product.price > max_price %}
+        {% continue %}
+      {% endif %}
+      {% render 'product-card', product: product %}
+      {% assign shown = shown | plus: 1 %}
+      {% if shown >= 10 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% if shown == 0 %}
       <div class="empty-state">
         <p class="eyebrow">Inventory in progress</p>
         <h2>No products available yet</h2>
@@ -26,7 +42,7 @@
       </div>
     {% endif %}
   </div>
-  {% if product_count > 10 %}
+  {% if source_products.size > shown and max_price == 0 %}
     <div class="browse-more">
       <a class="button-primary button-large" href="{{ routes.all_products_collection_url }}">Browse every product</a>
     </div>
@@ -39,6 +55,17 @@
   "settings": [
     {
       "type": "text",
+      "id": "anchor_id",
+      "label": "HTML anchor id (optional, for linking from other sections)"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Start here"
+    },
+    {
+      "type": "text",
       "id": "heading",
       "label": "Heading",
       "default": "Popular practical finds"
@@ -47,6 +74,22 @@
       "type": "collection",
       "id": "collection",
       "label": "Collection"
+    },
+    {
+      "type": "select",
+      "id": "sort_by",
+      "label": "Sort",
+      "options": [
+        { "value": "manual", "label": "Default" },
+        { "value": "created-descending", "label": "Newest first" },
+        { "value": "price-ascending", "label": "Price: low to high" }
+      ],
+      "default": "manual"
+    },
+    {
+      "type": "number",
+      "id": "max_price",
+      "label": "Only show items at or under this price (0 = no limit)"
     }
   ]
 }
