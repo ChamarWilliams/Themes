@@ -107,7 +107,6 @@ img {
   font-size: 16px;
 }
 
-.search button,
 .button-primary,
 .button-secondary {
   border: 0;
@@ -118,8 +117,17 @@ img {
   text-align: center;
 }
 
-.search button,
 .button-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.search button {
+  border: 0;
+  border-radius: 0;
+  padding: 12px 18px;
+  font-weight: 750;
+  cursor: pointer;
   background: var(--color-accent);
   color: #ffffff;
 }
@@ -149,16 +157,42 @@ img {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-weight: 650;
+  gap: 10px;
+}
+
+.header-actions a,
+.header-actions .drawer-trigger {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: var(--color-panel);
+  color: var(--color-ink);
+  font-weight: 750;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.header-actions a:hover,
+.header-actions .drawer-trigger:hover {
+  border-color: var(--color-accent);
+  background: var(--color-soft);
 }
 
 .header-shop-all {
-  color: var(--color-accent-strong);
-  font-weight: 850;
+  background: var(--color-accent);
+  border-color: var(--color-accent) !important;
+  color: #ffffff !important;
+  font-weight: 800;
 }
 
-.drawer-trigger,
+.header-shop-all:hover {
+  background: var(--color-accent-strong);
+  border-color: var(--color-accent-strong) !important;
+}
+
 .drawer-close {
   appearance: none;
   border: 1px solid var(--color-line);
@@ -171,7 +205,6 @@ img {
   padding: 10px 12px;
 }
 
-.drawer-trigger:hover,
 .drawer-close:hover,
 .drawer-nav a:hover,
 .drawer-quick-actions a:hover,
@@ -461,6 +494,43 @@ body.drawer-open {
   font-weight: 850;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.sort-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.sort-form label {
+  color: var(--color-muted);
+  font-weight: 750;
+  font-size: 14px;
+}
+
+.sort-form select {
+  appearance: none;
+  min-height: 42px;
+  padding: 0 34px 0 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: var(--color-panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23657064' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 14px center;
+  color: var(--color-ink);
+  font: inherit;
+  font-weight: 750;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sort-form select:hover {
+  border-color: var(--color-accent);
+}
+
+.sort-form select:focus-visible {
+  outline: 3px solid rgba(77, 149, 95, .18);
+  outline-offset: -3px;
+  border-color: var(--color-accent);
 }
 
 .product-grid {
