@@ -23,6 +23,14 @@
       "type": "trust-bar",
       "settings": {}
     },
+    "deals": {
+      "type": "featured-collection",
+      "settings": {
+        "eyebrow": "Marked down now",
+        "heading": "Today's deals",
+        "sort_by": "biggest-savings"
+      }
+    },
     "featured": {
       "type": "featured-collection",
       "settings": {
@@ -54,6 +62,7 @@
     "hero",
     "categories",
     "trust",
+    "deals",
     "featured",
     "new-arrivals",
     "under-30"
