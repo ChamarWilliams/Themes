@@ -12,12 +12,8 @@
   <div class="product-card-body">
     <a class="product-title" href="{{ product.url }}">{{ product.title }}</a>
     {% render 'price', product: product %}
-    {% if product.type != blank %}
-      <p>{{ product.type }}</p>
-    {% endif %}
     {% assign card_variant = product.selected_or_first_available_variant %}
     <div class="product-card-actions">
-      <a class="button-secondary product-details-button" href="{{ product.url }}">View item</a>
       {% if product.available and card_variant %}
         <form action="{{ routes.cart_add_url }}" method="post">
           <input type="hidden" name="id" value="{{ card_variant.id }}">
