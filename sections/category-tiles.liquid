@@ -18,9 +18,11 @@
       {% endif %}
       {% assign seen_types = seen_types | append: type_key %}
       <a class="category-tile" href="{{ routes.search_url }}?q={{ product.type | url_encode }}&type=product">
-        {% if product.featured_media %}
-          {{ product.featured_media | image_url: width: 300 | image_tag: loading: 'lazy', widths: '150,220,300', alt: product.type }}
-        {% endif %}
+        <span class="category-tile-thumb">
+          {% if product.featured_media %}
+            {{ product.featured_media | image_url: width: 120 | image_tag: loading: 'lazy', widths: '60,90,120', alt: product.type }}
+          {% endif %}
+        </span>
         <span>{{ product.type }}</span>
       </a>
       {% assign shown = shown | plus: 1 %}

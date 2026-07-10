@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="announcement">{{ settings.announcement_text }}</div>
   <div class="header-shell">
-    <a class="brand brand-lockup" href="{{ routes.root_url }}" aria-label="{{ settings.brand_name | default: 'Trefelle' }}">
+    <a class="brand-lockup" href="{{ routes.root_url }}" aria-label="{{ settings.brand_name | default: 'Trefelle' }}">
       <img src="{{ 'trefelle-logo-mark.png' | asset_url }}" alt="" loading="eager">
       <span>{{ settings.brand_name | default: 'Trefelle' }}</span>
     </a>
