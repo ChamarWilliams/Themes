@@ -1,5 +1,10 @@
 <article class="product-card">
   <a class="product-card-media" href="{{ product.url }}">
+    {% assign card_variant_for_badge = product.selected_or_first_available_variant %}
+    {% if card_variant_for_badge.compare_at_price > card_variant_for_badge.price %}
+      {% assign discount_pct = card_variant_for_badge.compare_at_price | minus: card_variant_for_badge.price | times: 100.0 | divided_by: card_variant_for_badge.compare_at_price %}
+      <span class="discount-badge">{{ discount_pct | round }}% off</span>
+    {% endif %}
     {% if product.featured_media %}
       {{ product.featured_media | image_url: width: 600 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 25vw, 50vw', widths: '250,400,600', alt: product.title }}
     {% endif %}

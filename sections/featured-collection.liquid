@@ -20,6 +20,8 @@
     {% assign source_products = source_products | sort: "created_at" | reverse %}
   {% elsif sort_mode == "price-ascending" %}
     {% assign source_products = source_products | sort: "price" %}
+  {% elsif sort_mode == "biggest-savings" %}
+    {% assign source_products = source_products | sort: "compare_at_price_max" | reverse %}
   {% endif %}
 
   <div class="product-grid">
@@ -82,7 +84,8 @@
       "options": [
         { "value": "manual", "label": "Default" },
         { "value": "created-descending", "label": "Newest first" },
-        { "value": "price-ascending", "label": "Price: low to high" }
+        { "value": "price-ascending", "label": "Price: low to high" },
+        { "value": "biggest-savings", "label": "Biggest savings first" }
       ],
       "default": "manual"
     },
