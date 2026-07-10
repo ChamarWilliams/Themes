@@ -46,25 +46,38 @@
         <li>Review photos, price, shipping, and taxes at checkout before payment.</li>
       </ul>
 
-      <div class="product-info-grid">
-        <div>
-          <strong>Why it works</strong>
-          <span>Useful, compact, and easy to compare.</span>
-        </div>
-        <div>
-          <strong>Good for</strong>
-          <span>{{ product.type | default: 'Everyday convenience' }}</span>
-        </div>
-        <div>
-          <strong>Checkout</strong>
-          <span>Secure Shopify checkout with cart saved in this browser.</span>
-        </div>
+      {% assign current_variant_specs = product.selected_or_first_available_variant %}
+      <div class="specs-accordion">
+        <details open>
+          <summary>Product details</summary>
+          <table class="specs-table">
+            <tbody>
+              <tr><td>Brand</td><td>{{ product.vendor | default: shop.name }}</td></tr>
+              {% if product.type != blank %}<tr><td>Type</td><td>{{ product.type }}</td></tr>{% endif %}
+              {% if current_variant_specs.sku != blank %}<tr><td>SKU</td><td>{{ current_variant_specs.sku }}</td></tr>{% endif %}
+              <tr><td>Availability</td><td>{% if product.available %}In stock{% else %}Currently unavailable{% endif %}</td></tr>
+            </tbody>
+          </table>
+        </details>
+        {% assign real_options = product.options_with_values | where: "name", "Title" | size %}
+        {% if product.options.size > 0 and real_options == 0 %}
+          <details>
+            <summary>Options</summary>
+            <table class="specs-table">
+              <tbody>
+                {% for option in product.options_with_values %}
+                  <tr><td>{{ option.name }}</td><td>{{ option.values | join: ", " }}</td></tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </details>
+        {% endif %}
       </div>
     </div>
   </div>
 
   <div class="product-buybox">
-    <p class="breadcrumb"><a href="{{ routes.all_products_collection_url }}">All products</a>{% if product.type != blank %} / {{ product.type }}{% endif %}</p>
+    <p class="breadcrumb"><a href="{{ routes.all_products_collection_url }}">All products</a>{% if product.type != blank %} &rsaquo; {{ product.type }}{% endif %}</p>
     <h1>{{ product.title }}</h1>
     <div class="rating-row" aria-label="Trefelle product fit summary">
       <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
